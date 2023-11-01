@@ -4,7 +4,7 @@ class Api::V2::MessagesController < ApplicationController
         if greeting.nil?
           render json: { error: 'Record not found' }, status: 500
         else
-          render json: { message: greeting.text }
+          render json: { message: messages.greetings }
         end
     end
 end
